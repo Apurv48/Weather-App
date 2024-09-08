@@ -19,8 +19,10 @@ def getData():
     response = requests.get(url,params=param)
     data = response.json()
     city = data['name']
+    time = data['timezone']
     return (f"data : {data} ,"
-            f" city : {city}")
+            f" city : {city} ,"
+            f"time : {time}")
 
 
 if __name__=="__main__":
