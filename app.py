@@ -45,9 +45,9 @@ def getData():
     }
 
     response = requests.get(url,params=param)
-    city = data['name']
     data = response.json()
-    return f"data : {data} , city : {city}"
+    city = data['name']
+    return f"data : {data}"
 
 if __name__=="__main__":
 >>>>>>> dfa6ff1484cedf0067caa096d45e4db7459ca29a
