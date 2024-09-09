@@ -26,11 +26,12 @@ def getData():
     response = requests.get(url,params=param)
     data = response.json()
     city = data['name']
-    temp = data['main']['temp_min']
-    # temp = data['temp_max']
+    temp_min = data['main']['temp_min']
+    temp_max = data['main']['temp_max']
     return (f"data : {data} ,"
             f" city : {city} ,"
-            f"temp : {temp} ,")
+            f"temp_min : {temp_min} ,"
+           f"temp_max : {temp_max)")
 
 
 if __name__=="__main__":
