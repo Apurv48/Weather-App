@@ -21,7 +21,7 @@ def home():
 
 def getData():
     url = "https://api.openweathermap.org/data/2.5/weather"
-    appid = "c1452656aebf77480c65ea5895de9a9"
+    appid = c1452656aebf77480c65ea5895de9a9
 
     
     param = {
