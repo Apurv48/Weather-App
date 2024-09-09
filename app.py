@@ -18,7 +18,7 @@ def getData():
     url = "https://api.openweathermap.org/data/2.5/weather"
     param = {
             'q': request.form.get('city'),
-        'appid':request.form.get('appid'),
+        'appid':"c1452656aebf77480c65ea5895de9a9",
         'metrices':request.form.get('units')
     }
 
