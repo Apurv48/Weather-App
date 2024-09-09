@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 def temp_in_celcius(time):
     time = time - 273.15
-    return time
+    return round(time,2)
 
 
 @app.route("/")
