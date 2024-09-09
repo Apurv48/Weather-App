@@ -21,7 +21,7 @@ def home():
 
 def getData():
     url = "https://api.openweathermap.org/data/2.5/weather"
-    app = "c1452656aebf77480c65ea5895de9a9"
+    appid = "c1452656aebf77480c65ea5895de9a9"
 
     
     param = {
@@ -29,7 +29,7 @@ def getData():
         'metrices':request.form.get('units')
     }
 
-    response = requests.get(url,app,params=param)
+    response = requests.get(url,appid,params=param)
     data = response.json()
     city = data['name']
     temp_min = temp_in_celcius(data['main']['temp_min'])
