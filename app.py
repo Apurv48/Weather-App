@@ -3,15 +3,18 @@ import requests
 
 app = Flask(__name__)
 
-def temp_in_celcius(time):
-    time = time - 273.15
-    return time
+
 
 @app.route("/")
 def home():
     return render_template("index.html")
 
 @app.route("/weatherapp",methods=['POST','GET'])
+
+def temp_in_celcius(time):
+    time = time - 273.15
+    return time
+    
 def getData():
     url = "https://api.openweathermap.org/data/2.5/weather"
     param = {
