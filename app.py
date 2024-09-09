@@ -7,10 +7,7 @@ def temp_in_celcius(time):
     time = time - 273.15
     return round(time,2)
 
-def getapi():
-    app = "c1452656aebf77480c65ea5895de9a9"
-    return app
-
+API_KEY = "c14526564aebf77480c65ea5895de9a9"
 
 
 @app.route("/")
@@ -25,7 +22,7 @@ def getData():
     
     param = {
             'q': request.form.get('city'),
-            'appid':request.form.get('appid'),
+            'appid':API_KEY,
 
         'metrices':request.form.get('units')
     }
