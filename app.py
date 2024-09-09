@@ -20,11 +20,10 @@ def getData():
     data = response.json()
     city = data['name']
     time = data['timezone']
-    temp = data['temp_max']
+    # temp = data['temp_max']
     return (f"data : {data} ,"
             f" city : {city} ,"
-            f"time : {time} ,"
-            f"temp : {temp}")
+            f"time : {time} ,")
 
 
 if __name__=="__main__":
