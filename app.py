@@ -30,7 +30,7 @@ def getData():
         'metrices':request.form.get('units')
     }
 
-    response = requests.get(url,appid,params=param)
+    response = requests.get(url,params=param)
     data = response.json()
     city = data['name']
     temp_min = temp_in_celcius(data['main']['temp_min'])
