@@ -25,7 +25,7 @@ def getData():
     
     param = {
             'q': request.form.get('city'),
-            'appid' = getapi(),
+            'appid':getapi(),
 
         'metrices':request.form.get('units')
     }
