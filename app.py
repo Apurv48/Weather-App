@@ -3,6 +3,10 @@ import requests
 
 app = Flask(__name__)
 
+def temp_in_celcius(time):
+    time = time - 273.15
+    return time
+
 @app.route("/")
 def home():
     return render_template("index.html")
@@ -20,6 +24,7 @@ def getData():
     data = response.json()
     city = data['name']
     temp = data['main']['temp_min']
+    time = temp_in_celcius(time)
     # temp = data['temp_max']
     return (f"data : {data} ,"
             f" city : {city} ,"
