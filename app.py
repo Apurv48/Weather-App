@@ -11,9 +11,9 @@ def home():
 
 @app.route("/weatherapp",methods=['POST','GET'])
 
-def temp_in_celcius(time):
-    time = time - 273.15
-    return time
+# def temp_in_celcius(time):
+#     time = time - 273.15
+#     return time
     
 def getData():
     url = "https://api.openweathermap.org/data/2.5/weather"
@@ -26,8 +26,7 @@ def getData():
     response = requests.get(url,params=param)
     data = response.json()
     city = data['name']
-    temp = data['main']['temp_min']
-    time = temp_in_celcius(time)
+    temp = data['main']['temp_min']-273.15
     # temp = data['temp_max']
     return (f"data : {data} ,"
             f" city : {city} ,"
