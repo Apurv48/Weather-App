@@ -31,7 +31,7 @@ def getData():
     return (f"data : {data} ,"
             f" city : {city} ,"
             f"temp_min : {temp_min} ,"
-            f"temp_max : {temp_max)")
+            f"temp_max : {temp_max} ")
 
 
 if __name__=="__main__":
