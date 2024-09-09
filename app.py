@@ -7,6 +7,11 @@ def temp_in_celcius(time):
     time = time - 273.15
     return round(time,2)
 
+def getapi():
+    app = "c1452656aebf77480c65ea5895de9a9"
+    return app
+
+
 
 @app.route("/")
 def home():
@@ -16,14 +21,15 @@ def home():
 
 def getData():
     url = "https://api.openweathermap.org/data/2.5/weather"
-    app = c1452656aebf77480c65ea5895de9a9
+    app = "c1452656aebf77480c65ea5895de9a9"
+
+    
     param = {
             'q': request.form.get('city'),
-        'appid':app,
         'metrices':request.form.get('units')
     }
 
-    response = requests.get(url,params=param)
+    response = requests.get(url,app,params=param)
     data = response.json()
     city = data['name']
     temp_min = temp_in_celcius(data['main']['temp_min'])
