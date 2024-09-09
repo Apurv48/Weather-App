@@ -26,7 +26,8 @@ def getData():
     response = requests.get(url,params=param)
     data = response.json()
     city = data['name']
-    temp = data['main']['temp_min']-273.15
+    temp = data['main']['temp_min']
+    temp=temp-273.15
     # temp = data['temp_max']
     return (f"data : {data} ,"
             f" city : {city} ,"
