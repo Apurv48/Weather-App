@@ -19,7 +19,7 @@ def getData():
     response = requests.get(url,params=param)
     data = response.json()
     city = data['name']
-    time = data['timezone']
+    time = data['main']
     # temp = data['temp_max']
     return (f"data : {data} ,"
             f" city : {city} ,"
