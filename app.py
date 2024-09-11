@@ -24,7 +24,7 @@ def getData():
             'q': request.form.get('city'),
             'appid':API_KEY,
 
-        'metrices':request.form.get('units')
+        'metrices':'metric'
     }
 
     response = requests.get(url,params=param)
