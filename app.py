@@ -16,7 +16,7 @@ def home():
 @app.route("/weatherapp",methods=['POST','GET'])
 
 def getData():
-url = f"http://api.openweathermap.org/data/2.5/weather?q=request.form.get{city}&appid={API_KEY}&units=metric"
+url = "http://api.openweathermap.org/data/2.5/weather?q=request.form.get{city}&appid={API_KEY}&units=metric"
 
     
 
