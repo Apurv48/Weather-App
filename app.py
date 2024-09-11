@@ -8,7 +8,7 @@ def temp_in_celcius(time):
     return round(time,2)
 
 API_KEY = "c14526564aebf77480c65ea5895de9a9"
-Metric = 'Metric'
+Metric = 'metric'
 
 
 @app.route("/")
@@ -24,7 +24,7 @@ def getData():
     param = {
             'q': request.form.get('city'),
             'appid':API_KEY,
-            'metrices': Metric
+            'unit': Metric
     }
 
     response = requests.get(url,params=param)
