@@ -8,7 +8,7 @@ def temp_in_celcius(time):
     return round(time,2)
 
 API_KEY = "c14526564aebf77480c65ea5895de9a9"
-Metric = 'metric'
+Metric = 'Metric'
 
 
 @app.route("/")
