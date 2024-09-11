@@ -24,8 +24,7 @@ def getData():
     param = {
             'q': request.form.get('city'),
             'appid':API_KEY,
-
-        'metrices': Metric
+            'metrices': Metric
     }
 
     response = requests.get(url,params=param)
