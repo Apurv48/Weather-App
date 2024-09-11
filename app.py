@@ -8,8 +8,6 @@ def temp_in_celcius(time):
     return round(time,2)
 
 API_KEY = "c14526564aebf77480c65ea5895de9a9"
-Metric = 'metric'
-
 
 @app.route("/")
 def home():
@@ -18,16 +16,11 @@ def home():
 @app.route("/weatherapp",methods=['POST','GET'])
 
 def getData():
-    url = "https://api.openweathermap.org/data/2.5/weather"
+url = f"http://api.openweathermap.org/data/2.5/weather?q=request.form.get{city}&appid={API_KEY}&units=metric"
 
     
-    param = {
-            'q': request.form.get('city'),
-            'appid':API_KEY,
-            'unit': Metric
-    }
 
-    response = requests.get(url,params=param)
+    response = requests.get(url)
     data = response.json()
     city = data['name']
     temp_min = temp_in_celcius(data['main']['temp_min'])
